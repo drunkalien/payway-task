@@ -93,8 +93,9 @@ io.on("connection", async (socket) => {
 });
 
 // backups every day at midnight
-const job = new CronJob("0 0 * * *", backupScript, null, true);
-job.start();
+// const job = new CronJob("0 1 * * *", backupScript, null, true);
+// job.start();
+backupScript();
 
 const PORT = process.env.PORT;
 
